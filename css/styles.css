@@ -8,6 +8,11 @@
   --secondary-bgc: #f4f4fd;
   --btn-bg: rgba(255, 255, 255, 0.1);
   --company-border: #8e8f99;
+  --transtn-color: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transtn-bgc: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transtn-bc: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transtn-bs: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transtn-b: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 h1,
@@ -83,7 +88,6 @@ body {
 .header {
   display: flex;
   border-bottom: 1px solid var(--secondary-color-text);
-  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 .nav {
   display: flex;
@@ -124,6 +128,7 @@ body {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--secondary-color-title);
+  transition: var(--transtn-color);
 }
 
 .nav-link:hover,
@@ -140,6 +145,7 @@ body {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--main-color-text);
+  transition: var(--transtn-color);
 }
 
 .contact:hover,
@@ -188,6 +194,7 @@ body {
   border: none;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
+  transition: var(--transtn-bgc);
 }
 .btn:hover,
 .btn:focus,
@@ -300,6 +307,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: var(--transtn-bgc);
 }
 .team-soc-link:is(:hover, :focus) {
   background-color: var(--active-color);
@@ -329,6 +337,7 @@ body {
   border: 1px solid var(--company-border);
   border-radius: 4px;
   color: var(--company-border);
+  transition: var(--transtn-bc), var(--transtn-color);
 }
 
 .customers-icon {
@@ -385,6 +394,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: var(--transtn-bgc);
 }
 
 .footer-soc-link:is(:hover, :focus) {
@@ -402,7 +412,8 @@ body {
 /* -------------- PORTFOLIO ------------ */
 .header-border {
   border-bottom: 1px solid var(--secondary-color-text);
-  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
+  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 .gallery {
   padding-top: 96px;
@@ -416,6 +427,7 @@ body {
 }
 .gallery-link {
   display: block;
+  transition: var(--transtn-bs);
 }
 .gallery-link:is(:hover, :focus) {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
@@ -448,6 +460,8 @@ body {
   background-color: var(--secondary-bgc);
   border: 1px solid var(--secondary-color-text);
   border-radius: 4px;
+  transition: var(--transtn-bgc), var(--transtn-color),
+    var(--transtn-b), var(--transtn-bs);
 }
 
 .btns:hover,
