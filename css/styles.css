@@ -561,6 +561,10 @@ body {
   margin-left: auto;
   cursor: pointer;
 }
+.modal-close:is(:hover, :focus) {
+  background-color: var(--active-color);
+  fill: var(--main-color-title);
+}
 
 .is-hidden {
   opacity: 0;
